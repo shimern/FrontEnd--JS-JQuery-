@@ -1,0 +1,583 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+  min-height: 100vh;
+  background-color:cadetblue;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.container {
+  padding: 30px;
+  max-width: 800px;
+  width:500px;
+}
+
+.container .box {
+  position: relative;
+  margin-bottom: 20px; /* Нижний отступ между элементами аккордеона */
+}
+
+.container .box:last-child {
+  margin-bottom: 0px; /* Для последнего элемента нижний отступ убираем*/ 
+}
+
+.container .box .label {
+  position: relative;
+  padding: 20px; /* Внутренний отступ для видимой части */
+  background-color: darkblue; /* Цвет элемента аккордеона */
+  color: #fff; /* Цвет шрифта элемента аккордеона */
+  cursor: pointer; /* Меняем курсор при наведении */
+}
+
+.container .box .label::after {
+  content: "+"; /* Задаем иконку "+" для элемента аккордеона */
+  position: absolute;
+  top: 50%; /* Выравнивание по центру */
+  transform: translateY(-50%);
+  right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.container .box.active .label::after {
+  content: "\2013"; /* Меняем иконку на "-" при нажатии на элемент */
+}
+
+.container .box .content {
+  position: relative;
+  background-color: #fff; /* Цвет фона контента */
+  overflow: hidden;
+  max-height: 0; /* Скрываем контент */
+  transition: 0.5s; /* Для плавности анимации */
+}
+
+.container .box .content p {
+  padding: 20px;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.calendar-wrapper {
+  width: 360px;
+  margin: 3em auto;
+  padding: 2em;
+  border: 1px solid #dcdcff;
+  border-radius: 5px;
+  background: #fff;
+}
+table {
+  clear: both;
+  width: 100%;
+  border: 1px solid #dcdcff;
+  border-radius: 3px;
+  border-collapse: collapse;
+  color: #444;
+}
+td {
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid #dcdcff;
+  border-top: 1px solid #dcdcff;
+  width: 14.28571429%;
+}
+td.not-current {
+  color: #c0c0c0;
+}
+td.today {
+  font-weight: 700;
+  color: #28283b;
+  font-size: 1.5em;
+}
+td.today_weekend {
+    background-color: rgb(240,128,128);
+}
+thead td {
+  border: none;
+  color: #28283b;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+/*
+#btnPrev {
+  float: left;
+  margin-bottom: 20px;
+}
+#btnPrev:before {
+  content: '\f104';
+  font-family: FontAwesome;
+  padding-right: 4px;
+}
+#btnNext {
+  float: right;
+  margin-bottom: 20px;
+}
+#btnNext:after {
+  content: '\f105';
+  font-family: FontAwesome;
+  padding-left: 4px;
+}
+#btnPrev,
+#btnNext {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #c0c0c0;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+#btnPrev:hover,
+#btnNext:hover {
+  color: #28283b;
+  font-weight: bold;
+}*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.div-count
+{
+    display:flex;
+    align-items: center; /* выравнивание по вертикали (по центру) */
+    justify-content: center; /* выравнивание по горизонтали (по центру) */
+    padding:10px;
+}
+.count
+{
+    height:20px;
+    width:100px;
+    background-color: #E6E6FA;
+    color:darkblue;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.coloring
+{
+    display:flex;
+	flex-direction:row;
+    align-items: center; /* выравнивание по вертикали (по центру) */
+    justify-content: center; /* выравнивание по горизонтали (по центру) */
+    padding:10px;
+	
+}
+.coloring-start
+{
+    height:20px;
+    width:100px;
+    background-color: #E6E6FA;
+    color:cadetblue;
+    border: none;
+    padding: 10px 20px;
+	margin-right:10px;
+    font-size: 16px;
+}
+.coloring-end
+{
+	height:20px;
+    width:100px;
+    background-color: #E6E6FA;
+    color:cadetblue;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#listContainer
+{
+	padding-left:10%;
+}
+.div_create
+{
+	 display:flex;
+    align-items: center; /* выравнивание по вертикали (по центру) */
+    justify-content: center; /* выравнивание по горизонтали (по центру) */
+    padding:10px;
+	height:auto;
+}
+.button_create
+{
+    height:20px;
+    width:100px;
+    background-color:azure;
+    color:burlywood;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#sp
+{
+  position: relative;
+  height: 400px;
+	width:auto;
+	overflow: hidden;
+}
+#6task
+{
+	position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.DelList
+{
+
+    align-items: center; /* выравнивание по вертикали (по центру) */
+    justify-content: center; /* выравнивание по горизонтали (по центру) */
+    padding:10px;
+}
+.Label_DelList
+{
+	display:flex;
+    align-items: center; /* выравнивание по вертикали (по центру) */
+    justify-content: center; /* выравнивание по горизонтали (по центру) */
+    padding:10px;
+	  position: relative;
+  padding: 20px; /* Внутренний отступ для видимой части */
+  background-color:cadetblue; /* Цвет элемента аккордеона */
+  color:darkslategray; /* Цвет шрифта элемента аккордеона */
+  cursor: pointer; /* Меняем курсор при наведении */
+}
+.Content_DelList
+{
+	  position: relative;
+  background-color: #fff; /* Цвет фона контента */
+  overflow: hidden;
+  max-height: 0; /* Скрываем контент */
+  transition: 0.5s; /* Для плавности анимации */
+}
+.List7
+{
+	
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.imgWrapperCSS
+{
+
+  position: relative;
+  height: 400px;
+	width:auto;
+	overflow: hidden;
+}
+.underImgCSS
+{
+  opacity: 0;
+  position: absolute;
+  /*начальное положение блока */
+
+	 top:45%;
+	bottom:auto;
+	left:5%;
+	right:5%;
+  	justify-content: center;
+
+  /*  продолжительность и функциz перехода */
+  transition: opacity 0.5s ease-in-out;
+}
+.imgWrapperCSS:hover .underImgCSS {
+  opacity: 1;
+}
+.imgWrapperCSS:hover .displayCSS{
+  /* состояние картинки при наведении на блок */
+  opacity: 0;
+}
+.displayCSS
+{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.imgWrapperJS
+{
+
+  position: relative;
+  height: 400px;
+	width:auto;
+	overflow: hidden;
+}
+#underImgJS
+{
+  opacity: 0;
+  position: absolute;
+  /*начальное положение блока */
+
+	 top:45%;
+	bottom:auto;
+	left:5%;
+	right:5%;
+  	justify-content: center;
+
+  /*  продолжительность и функциz перехода */
+  transition: opacity 0.5s ease-in-out;
+}
+/*#display:hover
+{
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}*/
+#displayJS
+{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*#easy_table
+{
+	border-spacing: 10px 5px;
+}
+#easy_table td
+{
+	border-spacing: 10px 5px;
+	background-color: #f2f2f2;
+	border-radius: 20px;
+	border: none;
+}*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.err
+{
+	background-color:#ff6666;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.containerGameControl
+{
+	padding:10px;
+	text-align: center;
+	justify-content: center;
+}
+.gameButton
+{
+    align-items: center; /* выравнивание по вертикали (по центру) */
+    justify-content: left; /* выравнивание по горизонтали (по центру) */
+  padding: 20px;
+	padding-left:0;
+  background-color:cadetblue; 
+	color:darkslategray; 
+  cursor: pointer; 
+}
+.divContainerGame
+{
+	width:100%;
+	height: auto;
+	/*align-items: center;*/
+	justify-content: center;
+	display: grid;
+	grid-gap:0px;
+	grid-template-areas:
+		"A B C"
+		"D E F"
+		"G H I"
+		"J J K";
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.A, .B, .C, .D, .E, .F, .G, .H, .I
+{
+	border: 1px solid #ccc;
+	width:auto;
+	height:160px;
+	
+}
+.A
+{
+	grid-area:A;
+}
+.B
+{
+	grid-area:B;
+}
+.C
+{
+	grid-area:C;
+}
+.D
+{
+	grid-area:D;
+}
+.E
+{
+	grid-area:E;
+}
+.F
+{
+	grid-area:F;
+}
+.G
+{
+	grid-area:G;
+}
+.H
+{
+	grid-area:H;
+}
+.I
+{
+	grid-area:I;
+}
+
+
+.GameInf
+{
+	width:100%;
+	height: auto;
+	align-items: center;
+	/*justify-content: center;*/
+	display: grid;
+	grid-gap:0px;
+	grid-template-areas:
+		"J J K";
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.timerContainer
+{
+	grid-area:J;
+}
+.score
+{
+	grid-area:K;
+}
+
+#timer-label {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+#time-left {
+  border: 2px solid #777;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#start_stop, #reset,#ez-dif,#mid-dif,#high-dif {
+  background-color: white;
+  color: #777;
+  border: 2px solid #777;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#reset:hover {
+  background-color: #777;
+  color: white;
+}
+#start_stop:hover{
+	  background-color: #777;
+  color: white;
+}
+/*#ez-dif:hover{
+	  background-color: #777;
+  color: white;
+}
+#mid-dif:hover{
+	  background-color: #777;
+  color: white;
+}
+#high-dif:hover{
+	  background-color: #777;
+  color: white;
+}
+#ez-dif:active{
+	  background-color: #777;
+  color: white;
+}
+#mid-dif:active{
+	  background-color: #777;
+  color: white;
+}
+#high-dif:active{
+	  background-color: #777;
+  color: white;
+}*/
+.score
+{
+	margin:auto;
+	justify-content: center;
+	align-content: center;
+	font-size:40px;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.JQDiv1 
+{
+  margin-bottom: 20px;
+    background-color:darkcyan;
+	border-radius: 5px;
+	max-width: 800px;
+  	width:500px;
+	height:300px;
+	justify-content: center;
+	align-content: center;
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.JQContent
+{
+	display:flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+    background-color:#ccc;
+	border-radius: 5px;
+  	width:80%;
+	height:60%;
+}
+.JQButton {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+/*  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);*/
+  background-image: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: 0.5s;
+}
+.JQButton:hover {
+  background-position: right center;
+}

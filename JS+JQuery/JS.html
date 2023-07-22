@@ -1,0 +1,1085 @@
+<!Docktype html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <link rel="stylesheet" href = "JS1.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
+    </head>
+    <body>
+		<div style="display:block; height:auto;margin-bottom:20px;margin-top:40px;"><h1 style="text-align: center;">Задания по JS</h1></div>
+		<button class="JQButton">Плавный спуск</button>
+        <div class="container">
+            
+            <div class="box">
+                <div class="label">Время</div>
+                <div class="content">
+                    <p id="DT"></p>
+                </div>
+            </div>
+            
+             <div class="box">
+                <div class="label">Календарь</div>
+                <div class="content">
+                  <div class="calendar-wrapper">
+                        <!--<button id="btnPrev" type="button">Предыдущий</button>
+                        <button id="btnNext" type="button">Следующий</button>-->
+                        <div id="divCal"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="box">
+                <div class="label">Элементы DOM-дерева</div>
+                <div class="content">
+                    <div class="div-count" >
+                        <button class = "count", onclick="button3Click()">Подсчет</button>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="box">
+                <div class="label">Перекраска блоков</div>
+                <div class="content">
+                    <div class="coloring">
+                        <button class = "coloring-start", onclick="startColoring()">Старт</button>
+                        <button class = "coloring-end", onclick="endColoring()">Конец</button>
+                    </div>
+                </div>
+            </div>
+			
+			 <div class="box">
+                <div class="label">Создание списка</div>
+                <div class="content">
+					<div class="div_create">
+                    	<button class = "button_create", onclick="CreateLists()">Начать</button>
+					</div>
+					<div id="listContainer">
+					</div>
+                 </div>
+            </div>
+
+			
+			<div class="box">
+                <div class="label">Смена картинок</div>
+                <div class="content">
+                   <div id="sp">
+					   <img id="6task" alt="Для начала смены наведите на текст."; 
+							onmouseover=""
+                			onmouseout="change();"/>  
+					</div>
+                 </div>
+            </div>
+			  
+			<div class="box">
+                <div class="label">Удаление списка</div>
+                <div class="content">
+					<div class="DelList">
+						<div class="Label_DelList">
+							Сладости
+						</div>
+						
+						<div class="Content_DelList">
+							<ul class="List7">
+							  <li>Леденец</li>
+							  <li>Орешек со сгущенкой</li>
+							  <li>Мед</li>
+							  <li>Рафаэлло</li>
+							</ul>
+						</div>
+					</div>
+                   <!--навесить слушатель клика на элементы листа-->
+                 </div>
+            </div>
+			
+			<div class="box">
+                <div class="label">Проявление (CSS)</div>
+                <div class="content">
+                   <div class="imgWrapperCSS">
+					   <img src="pyro.jpg" class="displayCSS";/> 
+					   <div class = "underImgCSS">Представь что существует механизм, что чуть что вернет на бис время единственным щелчком.<br/>
+					   Вернёт всё то, хоть и ни капельки не жаль,<br/>
+					   но если есть такой рычаг, подскажите куда нажать?</div>
+					</div>
+                 </div>
+            </div>
+			
+			<div class="box">
+                <div class="label">Проявление (JS)</div>
+                <div class="content">
+                   <div class="imgWrapperJS">
+					   <img src="pyro.jpg" id="displayJS";
+							/> 
+					   <div id = "underImgJS">Представь что существует механизм, что чуть что вернет на бис время единственным щелчком.<br/>
+					   Вернёт всё то, хоть и ни капельки не жаль,<br/>
+					   но если есть такой рычаг, подскажите куда нажать?</div>
+					</div>
+                 </div>
+            </div>
+            
+            <div class="box">
+                <div class="label">Проверка корректности</div>
+                <div class="content">
+					<form class = "easy_form">
+							<table id="easy_table">
+								<tr><td><label for="login">Логин</label></td> <td><input id="login" type="text" required></td></tr>
+
+								<tr>
+								<td ><label for="email">E-mail</label></td>
+								<td ><input id="email" type="email" required></td>
+								</tr>
+
+								<tr>
+								<td><label for="DoB">Дата Рождения</label></td>
+								<td><input id="DoB" type="date" required></td>
+								</tr>
+								<tr>
+								<td><label for="password">Пароль</label></td>
+								<td>
+								<input id="password" minlength="8" type="password" required><br>
+								</td>
+								</tr>
+
+
+								<tr><td><label>Ваша специализация</label></td> <td>
+								<select required>
+									<option selected disabled></option>
+									<option>CS:GO</option>
+									<option>CoC</option>
+									<option>CR</option>
+									<option>FIFA</option>
+									<option>NFS</option><
+									option>LoL</option>
+								</select></td></tr>
+								<tr><td><label>Пол</label></td> <td>
+								M<input name = "gender" type="radio" value="male" required>
+								Ж<input name = "gender" type="radio" value="female" required>
+								С<input name = "gender" type="radio" value="it" required></td></tr>
+
+								<tr><td><label>Ваши навыки</label></td> <td>
+								<input type="checkbox"><label>Фриз на королевскую</label><br>
+								<input type="checkbox"><label>Friendly fier</label><br>
+								<input type="checkbox"><label>ХЕ под ноги</label><br>
+								<input type="checkbox"><label>Отъехать на миду</label><br>
+								<input type="checkbox"><label>R Кенча адк в джакса</label><br>
+									</td></tr>
+								<tr>
+								<td class="inpTable"><label for="message">Дополнительные сведения о себе</label></td>
+								<td class="inpTable"><textarea id="message" name="message" rows="4" cols="20"></textarea></td>
+								</tr>
+								</table>
+						<input class = "confirm9" type="submit"> <input type="reset">
+					</form>
+                    
+                </div>
+            </div>
+			
+			<div class="box">
+                <div class="label">Проверка корректности регулярными выражениями</div>
+                <div class="content">
+                    <form class="diff_form">
+							<table id="diff_table">
+								<tr>
+									<td><label for="login">Логин</label></td> <td><input id="login" type="text" pattern = "[a-zA-Z0-9_]{1,10}" title="Логин от 1 до 10" required></td>
+								</tr>
+
+								<tr>
+								<td ><label for="email">E-mail</label></td>
+								<td ><input id="email" type="email" pattern="\D[0-9a-zA-Z]+@.[a-z]{3,}\.[a-z]{1,3}" title="Email введен некорректно" required></td>
+									<!-- любая кроме цифр,1 и больше букв, @,буквы, (точка), домен  --> 
+								</tr>
+
+								<tr>
+								<td><label for="DoB2">Дата Рождения</label></td>
+								<td><input id="DoB2" type="date" required></td>
+								</tr>
+								<tr>
+								<td><label for="password">Пароль</label></td>
+								<td>
+								<input id="password" type="password" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,}$" title="Пароль должен содержать заглавные буквы и цифры" required><br>
+								</td>
+								</tr>
+
+
+								<tr><td><label>Ваша специализация</label></td> <td>
+								<select required>
+									<option selected disabled></option>
+									<option>CS:GO</option>
+									<option>CoC</option>
+									<option>CR</option>
+									<option>FIFA</option>
+									<option>NFS</option><
+									option>LoL</option>
+								</select></td></tr>
+								<tr><td><label>Пол</label></td> <td>
+								M<input name = "gender" type="radio" value="male" required>
+								Ж<input name = "gender" type="radio" value="female" required>
+								С<input name = "gender" type="radio" value="it" required></td></tr>
+
+								<tr><td><label>Ваши навыки</label></td> <td>
+								<input type="checkbox"><label>Фриз на королевскую</label><br>
+								<input type="checkbox"><label>Friendly fier</label><br>
+								<input type="checkbox"><label>ХЕ под ноги</label><br>
+								<input type="checkbox"><label>Отъехать на миду</label><br>
+								<input type="checkbox"><label>R Кенча адк в джакса</label><br>
+									</td></tr>
+								<tr>
+								<td class="inpTable"><label for="message">Дополнительные сведения о себе</label></td>
+								<td class="inpTable"><textarea id="message" name="message" rows="4" cols="20"></textarea></td>
+								</tr>
+								</table>
+						<input class = "confirm10" type="submit"> <input type="reset">
+					</form>
+                </div>
+            </div>
+			
+			<div class="box">
+                <div class="label">Игра</div>
+                <div class="content">
+					<div class="containerGameControl">
+						<input value="ez" type="radio" name="dif" checked/>Лёгкий
+						<input value="mid" type="radio" name="dif">Средний
+						<input value="high" type="radio" name="dif">Тяжёлый
+					</div>
+					<div class = "divContainerGame">
+						<div class="A"></div>
+						<div class="B"></div>
+						<div class="C"></div>
+						<div class="D"></div>
+						<div class="E"></div>
+						<div class="F"></div>
+						<div class="G"></div>
+						<div class="H"></div>
+						<div class="I"></div>
+					</div>
+					<div class = "GameInf">
+						<div class = "timerContainer" id="timerContainerID">
+							 <div id="timer-label">Оставшееся время:</div>
+							  <div id="time-left">00:00</div>
+							  <button id="start_stop">Старт</button>
+							  <button id="reset">Сброс</button>
+						</div>
+						<div class = "score"></div>
+					</div>
+                 </div>
+            </div>
+
+        </div>
+
+		<div class ="JQDiv1">
+			<h2 style="border:auto;">Факты об авторе</h2>
+			<div class ="JQContent">
+				<p>Хочет самокат по вебу. Любит песни Пирокинезиса.
+					Может посмотреть 6 сезонов аниме за неделю.
+					Не захотел уезжать из города после школы.
+					На первом курсе в олимпиаде занял с командой 3 место в вузе.
+				</p>
+			</div>
+		</div>
+        <script>
+            setInterval(showTime,1);
+            
+            // Получить элемент по id
+            function getId(id) {
+              return document.getElementById(id);
+            }
+            
+           const boxes = Array.from(document.querySelectorAll(".box")); // считываем все элементы аккордеона в массив
+
+            boxes.forEach((box) => {
+              box.addEventListener("click", boxHandler); // при нажатии на бокс вызываем ф-ию boxHanlder
+            });
+
+            function boxHandler(e) {
+              //e.preventDefault(); // сбрасываем стандартное поведение
+              let currentBox = e.target.closest(".box"); // определяем текущий бокс
+              let target = e.target;
+              let currentContent = e.target.nextElementSibling; // находим скрытый контент
+              
+//                currentContent.addEventListener("click", boxHandler)
+//              if (currentContent.classList.contains("activate")) {
+//                event.preventDefault();
+//                event.stopPropagation();
+//              }
+                if(target.classList.contains("label"))
+                {
+                      currentBox.classList.toggle("active"); // присваиваем ему активный класс
+                      if (currentBox.classList.contains("active")) {
+                        // если класс активный ..
+                        currentContent.style.maxHeight = currentContent.scrollHeight + "px"; // открываем контент
+                      } else {
+                        // в противном случае
+                        currentContent.style.maxHeight = 0; // скрываем контент
+                      }
+                }
+            }
+            
+            ///////////////////////////////////////////////////////////////////////////////////////
+            
+            function two (val)
+            {
+                if (val < 10) {
+                    val="0"+val;
+                    return val;
+                }
+                return val;
+            }
+            function showTime()
+            {
+                let DAYS = ["Воскресенье","Понедельник", "Вторник", "Среда","Четверг", "Пятница", "Суббота", ];
+                 let MONTHS = ["января", "февраля", "марта","апреля", "мая", "июня", "июля", "августа","сентября", "октября", "ноября", "декабря"];
+
+                let time= new Date();
+
+                let par=document.getElementById('DT');
+
+                let day_w=time.getDay();
+                day_w=DAYS[day_w];
+
+                let date_w= time.getDate();
+                date_w=String(two(date_w));
+
+                let month= time.getMonth();
+                month=MONTHS[month];
+
+                let year = time.getFullYear();
+
+                let m=time.getMinutes();
+                m=String(two(m));
+
+                let s=time.getSeconds();
+                s=String(two(s));
+
+                let h_m_s = ":"+m+":"+s
+
+                let h=time.getHours();
+                //h=String(two(h));почему то заработало и без нее
+                if(h<12)
+                {
+                    h=String(two(h));
+                    h_m_s = h+h_m_s+" (am)";
+                }
+                else
+                {
+                    h=String(two(h%12));
+                    h_m_s = h +h_m_s+" (pm)";
+                }
+                par.innerHTML=day_w+", "+date_w+" "+month+" "+year+" "+h_m_s;
+            }
+            
+            ///////////////////////////////////////////////////////////////////////////////////////
+            //Календарь
+            var Cal = function(divId) {
+
+              //Сохраняем идентификатор div
+              this.divId = divId;
+
+              // Дни недели с понедельника
+              this.DaysOfWeek = [
+                'Пн',
+                'Вт',
+                'Ср',
+                'Чт',
+                'Пт',
+                'Сб',
+                'Вс'
+              ];
+
+              // Месяцы начиная с января
+              this.Months =['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+
+              //Устанавливаем текущий месяц, год
+              var d = new Date();
+
+              this.currMonth = d.getMonth('9');
+              this.currYear = d.getFullYear('22');
+              this.currDay = d.getDate('3');
+            };
+
+
+
+            // Показать текущий месяц
+            Cal.prototype.showcurr = function() {
+              this.showMonth(this.currYear, this.currMonth);
+            };
+
+
+
+            // Показать месяц (год, месяц)
+            Cal.prototype.showMonth = function(y, m) {
+
+              var d = new Date()
+              // Первый день недели в выбранном месяце 
+              , firstDayOfMonth = new Date(y, m, 7).getDay()
+              // Последний день выбранного месяца
+              , lastDateOfMonth =  new Date(y, m+1, 0).getDate()
+              // Последний день предыдущего месяца
+              , lastDayOfLastMonth = m == 0 ? new Date(y-1, 11, 0).getDate() : new Date(y, m, 0).getDate();
+
+
+              var html = '<table>';
+
+              // Запись выбранного месяца и года
+              html += '<thead><tr>';
+              html += '<td colspan="7">' + this.Months[m] + ' ' + y + '</td>';
+              html += '</tr></thead>';
+
+
+              // заголовок дней недели
+              html += '<tr class="days">';
+              for(var i=0; i < this.DaysOfWeek.length;i++) {
+                html += '<td>' + this.DaysOfWeek[i] + '</td>';
+              }
+              html += '</tr>';
+
+              // Записываем дни
+              var i=1;
+              do {
+
+                var dow = new Date(y, m, i).getDay();
+
+                // Начать новую строку в понедельник
+                if ( dow == 1 ) {
+                  html += '<tr>';
+                }
+
+                // Если первый день недели не понедельник показать последние дни предидущего месяца
+                else if ( i == 1 ) {
+                  html += '<tr>';
+                  var k = lastDayOfLastMonth - firstDayOfMonth+1;
+                  for(var j=0; j < firstDayOfMonth; j++) {
+                    html += '<td class="not-current">' + k + '</td>';
+                    k++;
+                  }
+                }
+
+                // Записываем текущий день в цикл
+                var chk = new Date();
+                var chkY = chk.getFullYear();
+                var chkM = chk.getMonth();
+                if (chkY == this.currYear && chkM == this.currMonth && i == this.currDay) {
+                     html += '<td class="today">' + i + '</td>';
+                } 
+                else {
+                    if(dow==6 || dow==0)
+                    {
+                        html += '<td class="today_weekend">' + i + '</td>';
+                    }
+                    else{
+                         html += '<td class="normal">' + i + '</td>';
+                    }
+                }
+
+                // закрыть строку в воскресенье
+                if ( dow == 0 ) {
+                  html += '</tr>';
+                }
+
+                // Если последний день месяца не воскресенье, показать первые дни следующего месяца
+                else if ( i == lastDateOfMonth ) {
+                  var k=1;
+                  for(dow; dow < 7; dow++) {
+                    html += '<td class="not-current">' + k + '</td>';
+                    k++;
+                  }
+                }
+
+                i++;
+              }while(i <= lastDateOfMonth);
+
+              // Конец таблицы
+              html += '</table>';
+
+              // Записываем HTML в div
+              document.getElementById(this.divId).innerHTML = html;
+            };
+
+            // При загрузке окна
+            window.onload = function() {
+
+              // Начать календарь
+              var c = new Cal("divCal");			
+              c.showcurr();
+
+            }
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+            //const button3 =getId("count");
+                //button3.addEventListener("click",button3Click);
+            
+            function button3Click()
+            {
+				let listContainer = document.querySelector(".div-count");
+              let tables = Array.from(document.getElementsByTagName('table'));
+                // выводим число таблиц
+               let text = `Число таблиц на странице: ${tables.length}`;
+				//let pDiv = document.createElement('div');
+				listContainer.innerHTML=text;
+            }
+        ///////////////////////////////////////////////////////////////////////////////////////
+            var flag=true;
+            var colors = [];
+			let divs = Array.from(document.getElementsByTagName('div'));//создаем массив всех блоко
+			let prev_color=divs[0].style.background;//считываем исходный цвет блока
+			
+			//заполняем массив цветов
+            while (colors.length < 100) {
+                colors.push(`rgb(${rand(0, 255)}, ${rand(0, 255)}, ${rand(0, 255)})`);
+            }
+
+            // генератор случайных чисел
+            function rand(frm, to) {
+                return ~~(Math.random() * (to - frm)) + frm;
+            }
+			
+			
+			function startColoring()
+			{
+				flag=true;
+				setInterval(Coloring,150);
+			}
+            function Coloring()
+            {
+					if(flag)
+						{
+							 let coloring_div= divs[rand(0,divs.length-1)];
+							let color = colors[rand(0,colors.length-1)];
+							coloring_div.style.background=color;	
+						}
+            }
+            function endColoring()
+            {
+                flag=false;
+				divs.forEach((div) => {
+              		div.style.background=prev_color;
+				});
+            }
+        ///////////////////////////////////////////////////////////////////////////////////////
+			
+			function CreateLists(){
+				const listContainer = document.getElementById("listContainer");
+				const parentContent = listContainer.parentElement;
+				
+				let mainList = document.createElement('ul');
+				let input = prompt("Введите заголовок списка");
+				mainList.innerHTML = input;
+				listContainer.appendChild(mainList);
+				const c = 0;
+				inn(mainList, c);
+				function inn(mainList, c){
+					c += 1;
+					while (true) {
+						let subInput = prompt("Введите элемент списка " + c + " (для вложения списка введите ul | для выхода нажмите ESC)");
+						if (!subInput) {
+							break;
+							}
+						else if(subInput === "ul"){
+							let listItem = document.createElement('ul');
+							listItem.innerHTML = prompt("Введите заголовок списка");
+							//mainList.appendChild(listItem);
+							mainList.prepend(listItem);
+							inn(listItem, c);
+							}
+						else{
+							let listItem = document.createElement('li');
+							listItem.innerHTML = subInput;
+							mainList.prepend(listItem);
+							}
+						}
+					}
+				parentContent.style.maxHeight=parentContent.offsetHeight+listContainer.scrollHeight + "px";
+				}
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+			const images = ['1.jpg', '2.jpg', '3.jpg','4.jpg'];
+			var count=0;
+			const container = document.querySelector('#sp');
+			const img = container.querySelector('img');
+			function change()
+			{
+
+				document.getElementById('6task').setAttribute('src',images[count]);
+				count++;
+				if(count>=4)
+					count=0;
+			}
+
+			img.addEventListener('load', () => {
+			  const containerWidth = container.clientWidth;
+			  const containerHeight = container.clientHeight;
+			  const imageWidth = img.width;
+			  const imageHeight = img.height;
+
+			  const widthRatio = containerWidth / imageWidth;
+			  const heightRatio = containerHeight / imageHeight;
+
+			  const minRatio = Math.min(widthRatio, heightRatio);
+
+			  img.style.width = `${imageWidth * minRatio}px`;
+			  img.style.height = `${imageHeight * minRatio}px`;
+			})
+        ///////////////////////////////////////////////////////////////////////////////////////
+
+
+			const delList = document.querySelector('.DelList');
+			const parentContent = delList.parentElement;
+			const contentDelList = delList.querySelector('.Content_DelList');
+
+			delList.addEventListener('click', clickDelList);
+			function clickDelList(el) 
+			{
+
+				let container = el.target.closest(".DelList");
+				let target = el.target;
+				let currentContent = target.nextElementSibling;
+				if(target.classList.contains("Label_DelList"))
+                {
+					container.classList.toggle("active");
+					if (container.classList.contains("active")) {
+                        // если класс активный ..
+                        currentContent.style.maxHeight = currentContent.scrollHeight + "px"; // открываем контент
+						parentContent.style.maxHeight=parentContent.offsetHeight+currentContent.scrollHeight + "px";
+                      } else {
+                        // в противном случае
+                        currentContent.style.maxHeight = 0; // скрываем контент
+                      }
+				}
+
+
+			}
+			
+			const list = document.querySelector('.List7');
+			const listItems = document.querySelectorAll('.List7 li');
+			const message = document.createElement('li');
+			message.textContent = 'Сладости закончились';
+
+			function removeItemWithAnimation(item, callback) {
+			  // Создать анимацию для элемента списка
+			  item.animate([
+				{ opacity: 1, transform: 'translateY(0)' },
+				{ opacity: 0, transform: 'translateY(-10%)' }
+			  ], {
+				duration: 500, // Длительность анимации в миллисекундах
+			  });
+
+			  // Удалить элемент списка после окончания анимации
+			  setTimeout(() => {
+				item.remove();
+				callback(); // Вызвать функцию обратного вызова после удаления элемента
+			  }, 500); // Задержка в миллисекундах должна совпадать с длительностью анимации
+			}
+
+			function showEndMessage() {
+			  list.appendChild(message); // Добавить надпись о том, что сладости закончились
+			}
+
+			// Навесить обработчик событий на элементы списка
+			listItems.forEach((item) => 
+			{
+				item.style.cursor="pointer";
+				item.addEventListener('click', (event) => 
+				{
+					event.preventDefault(); // Отменить переход по ссылке по умолчанию
+
+					removeItemWithAnimation(item, () => 
+					{
+						  if (list.children.length === 0) 
+						  {
+							showEndMessage(); // Показать надпись о том, что сладости закончились
+						  }
+					});
+				});
+			});
+        ///////////////////////////////////////////////////////////////////////////////////////
+			const currImg = document.getElementById('displayJS');
+			const currTxt =document.getElementById('underImgJS');
+//одна не может начаться пока не завершится другая
+			function notopacityUp()
+			{
+				currImg.style.filter = `alpha(opacity=${0})`; // задаем новое значение прозрачности
+				currImg.style.opacity = 0; 
+				currTxt.style.opacity = 1;
+			}
+			
+			function notopacityDown()
+			{
+				currImg.style.filter = `alpha(opacity=${100})`; // задаем новое значение прозрачности
+      			currImg.style.opacity = 1; 
+				currTxt.style.opacity = 0;
+
+			}
+			
+			currImg.addEventListener('mouseenter', () => {
+			  setTimeout(notopacityUp, 10); // запускаем функцию постепенного исчезновения картинки через полсекунды после наведения на нее мыши
+			});
+			currImg.addEventListener('mouseleave', () => {
+			  setTimeout(notopacityDown, 10);
+			});
+		///////////////////////////////////////////////////////////////////////////////////////
+			const confirm9 = document.querySelector(".confirm9");
+			confirm9.addEventListener('click', formCheck);
+			
+			function formCheck(){
+				const form = document.querySelector(".easy_form");
+				const inputs = document.querySelectorAll("input[required]");
+				const select = document.querySelector("select");
+				const DateOfBirth = document.getElementById("DoB");
+
+				form.onreset = function(){
+					for(let i = 0; i < inputs.length; i++){
+						inputs[i].classList.remove('err');
+						//inputs[i].classList.remove('wrong');
+					}
+					select.classList.remove('err');
+				}
+
+				
+				//DateOfBirth.addEventListener('blur', function(){
+					 
+				//});
+				for(let i = 0; i < inputs.length; i++){
+						inputs[i].addEventListener('blur', function(){
+							if(!inputs[i].checkValidity()){
+								inputs[i].classList.add('err');
+							}
+							else{
+								inputs[i].classList.remove('err');
+							}
+							if(inputs[i].type == 'date')
+								{
+									var dateValue = DateOfBirth.value;
+									 var date = new Date(dateValue);
+									 var formatter = new Intl.DateTimeFormat('ru', { day: 'numeric', month: 'long', year: 'numeric' });
+									 var formattedDate = formatter.format(date);
+
+									var dateParts = formattedDate.split(' ');
+									var time = new Date();
+									if((parseInt(time.getFullYear()-dateParts[2])<7) || 						(parseInt(time.getFullYear()-dateParts[2])>150))
+										{
+											DateOfBirth.classList.add('err');
+										}
+									else
+										{
+											DateOfBirth.classList.remove('err');
+										}
+								}
+						});
+					}
+				select.addEventListener('blur', function(){
+						if(select.options[0].selected){
+							select.classList.add('err');
+						}
+						else{
+							select.classList.remove('err');
+						}
+				});
+				if(DateOfBirth.classList.contains('err'))
+				  {
+				   DateOfBirth.value="none";
+				  }
+			}
+        ///////////////////////////////////////////////////////////////////////////////////////
+			const confirm10 = document.querySelector(".confirm10");
+			confirm10.addEventListener('click', formCheckReg);
+			
+			function formCheckReg(){
+				const form = document.querySelector(".diff_form");
+				const inputs = document.querySelectorAll("input[required]");
+				const select = document.querySelector("select");
+				const DateOfBirth = document.getElementById("DoB2");
+
+				form.onreset = function(){
+					for(let i = 0; i < inputs.length; i++){
+						inputs[i].classList.remove('err');
+						//inputs[i].classList.remove('wrong');
+					}
+					select.classList.remove('err');
+				}
+
+				
+				//DateOfBirth.addEventListener('blur', function(){
+					 
+				//});
+				for(let i = 0; i < inputs.length; i++){
+						inputs[i].addEventListener('blur', function(){
+							if(!inputs[i].checkValidity()){
+								inputs[i].classList.add('err');
+							}
+							else{
+								inputs[i].classList.remove('err');
+							}
+							if(inputs[i].type == 'date')
+								{
+									var dateValue = DateOfBirth.value;
+									 var date = new Date(dateValue);
+									 var formatter = new Intl.DateTimeFormat('ru', { day: 'numeric', month: 'long', year: 'numeric' });
+									 var formattedDate = formatter.format(date);
+
+									var dateParts = formattedDate.split(' ');
+									var time = new Date();
+									if((parseInt(time.getFullYear()-dateParts[2])<7) || 						(parseInt(time.getFullYear()-dateParts[2])>150))
+										{
+											DateOfBirth.classList.add('err');
+										}
+									else
+										{
+											DateOfBirth.classList.remove('err');
+										}
+								}
+						});
+					}
+				select.addEventListener('blur', function(){
+						if(select.options[0].selected){
+							select.classList.add('err');
+						}
+						else{
+							select.classList.remove('err');
+						}
+				});
+				if(DateOfBirth.classList.contains('err'))
+				  {
+				   DateOfBirth.value="none";
+				  }
+			}
+			///////////////////////////////////////////////////////////////////////////////////////
+			
+			let timeLeft = 0;
+			let timerId = null;
+			let game=null;
+			let score=0;
+
+			function startTimer(duration) {
+			  timeLeft = duration;
+				
+			  timerId = setInterval(function() {
+				
+				const minutes = Math.floor(timeLeft / 60);
+				const seconds = timeLeft % 60;
+
+				let minutesStr = minutes.toString();
+				let secondsStr = seconds.toString();
+
+				if (minutes < 10) {
+				  minutesStr = "0" + minutes;
+				}
+
+				if (seconds < 10) {
+				  secondsStr = "0" + seconds;
+				}
+
+				const timeStr = minutesStr + ":" + secondsStr;
+				document.getElementById('time-left').innerHTML = timeStr;
+
+				if (timeLeft == 0) {
+				  clearInterval(timerId);
+				  document.getElementById('time-left').innerHTML='Время вышло!';
+				  score=0;
+				  document.getElementById('start_stop').innerHTML='Старт';
+				  clearInterval(game);
+				  clear_game();
+
+				}
+				timeLeft--;
+			  }, 1000);
+				
+				game = setInterval(function() {
+				if(timeLeft>0)
+				{
+					//проверка на наличие круга в игровом поле
+					let f=false;
+					
+					for (var i = 0; i < childBlocks.length; i++) 
+					{
+						var svg = childBlocks[i].querySelector("svg");
+						if(svg!=null)
+						{
+							f=true;
+						}
+					}
+					if(f)
+						{
+						var curcir = document.getElementById("curCir");
+						var svgContainer = divContainerGame.querySelector("svg");
+
+						if (svgContainer != null) {
+						  // Удалить SVG при клике на круг
+						  curcir.addEventListener("click", function() {
+							  try{
+								//this.parentNode.remove();
+							    document.querySelector("svg").remove();
+								score++;
+							  }
+							  catch(exception){ 
+						  }
+						  });
+						}
+							/*for (var i = 0; i < childBlocks.length; i++) 
+							{ // навешиваем обработчик на каждый вложенный блок
+							  childBlocks[i].addEventListener("click", function(event) {
+								var target = event.target.closest('circle');
+    							if (target)
+								{
+									 this.querySelector("svg").remove();
+								  //удаляем круг
+									score++;
+								}
+							  });
+							}*/
+						}
+					else
+					{
+						//выбираем параметры в зависимости от сложности
+						if(checkedRadio=='ez')
+						{
+							let i= Math.floor(Math.random() * childBlocks.length);
+							childBlocks[i].innerHTML= '<svg style="width:100%; height:auto;"><circle id="curCir" cx="50%" cy="50%" r="45%" fill="blue" /></svg>';
+						}
+						else if(checkedRadio=='mid')
+						{
+							let i= Math.floor(Math.random() * childBlocks.length);
+							childBlocks[i].innerHTML= '<svg style="width:100%; height:auto;"><circle id="curCir" cx="50%" cy="50%" r="25%" fill="blue" /></svg>';
+						}
+						else
+						{
+							let i= Math.floor(Math.random() * childBlocks.length);
+							let x =Math.floor(Math.random() * 70+15); 
+							let y= Math.random() * 70+15;
+							childBlocks[i].innerHTML= `<svg style="width:100%; height:auto;"><circle id="curCir" cx="${x}" cy="${y}" r="10%" fill="blue" /></svg>`;
+						}
+						//доделать сложный уровень сложности и нажатие на круг
+					}
+				}
+				else return;
+				document.querySelector(".score").innerHTML=`${score}`;
+			  
+			  },1);
+			}
+
+			document.addEventListener('DOMContentLoaded', function() {
+			  const startStopButton = document.getElementById('start_stop');
+			  const resetButton = document.getElementById('reset');
+				
+			  startStopButton.addEventListener('click', function() {
+				const duration = parseInt(prompt('Введите время в секундах:'));
+				if (duration) {
+				  if (startStopButton.innerHTML === 'Старт') {
+					startStopButton.innerHTML = 'Стоп';
+					for (var i = 0; i < radios.length; i++)
+    					if (radios[i].checked) 
+							checkedRadio=radios[i].value;
+					startTimer(duration);
+					
+				  } else {
+						startStopButton.innerHTML = 'Старт';
+						clearInterval(timerId);
+						clearInterval(game);
+					    clear_game();
+					}	
+					
+				  }
+				});
+			
+
+			  resetButton.addEventListener('click', function() {
+				clearInterval(timerId);
+				clearInterval(game);
+				clear_game();
+				document.querySelector(".score").innerHTML=`${score}`;
+				document.getElementById('time-left').innerHTML = "00:00";
+				document.getElementById('start_stop').innerHTML = 'Старт';
+			  });
+			});
+			
+			function clear_game()
+			{
+				for (var i = 0; i < childBlocks.length; i++) 
+						{
+							var svg1 = childBlocks[i].querySelector("svg");
+							if(svg1!=null)
+								childBlocks[i].querySelector("svg").remove();
+							  //удаляем круг
+						 }
+			    score=0;
+			}
+			var divContainerGame = document.querySelector(".divContainerGame"); // выбираем родительский блок
+			
+			var childBlocks = document.querySelectorAll(".divContainerGame > div"); // выбираем все вложенные блоки
+			
+			var checkedRadio;
+			var radios = document.getElementsByName('dif');
+			
+		/*function thegame(time)
+			{
+				if(time===0)
+				{
+					return;
+					
+				}
+				else
+				{
+					
+					//проверка на наличие круга в игровом поле
+					let f=false;
+					
+					for (var i = 0; i < childBlocks.length; i++) 
+					{
+						var svg = childBlocks[i].querySelector("svg");
+						if(svg!=null)
+						{
+							f=true;
+						}
+					}
+					
+					if(f)
+						{
+						for (var i = 0; i < childBlocks.length; i++) 
+							{ // навешиваем обработчик на каждый вложенный блок
+							  childBlocks[i].addEventListener("click", function() {
+								if( childBlocks[i].querySelector("svg"))
+								{
+									
+									 childBlocks[i].querySelector("svg").remove();
+								  //удаляем круг
+									score++;
+								}
+							  });
+							}	
+						}
+					else
+					{
+						//выбираем параметры в зависимости от сложности
+						if(checkedRadio=='ez')
+						{
+							let i= Math.floor(Math.random() * childBlocks.length);
+							childBlocks[i].innerHTML= '<svg style="width:100%; height:auto;"><circle cx="50%" cy="50%" r="45%" fill="blue" /></svg>';
+						}
+						else if(checkedRadio=='mid')
+						{
+							let i= Math.random(childBlocks.length);
+							childBlocks[i].innerHTML='<svg  style="width:100%; height:auto;"><circle cx="50%" cy="50%" r="20%" fill="blue" /></svg>';
+						}
+						else
+						{
+							let i= Math.random(childBlocks.length);
+							childBlocks[i].innerHTML='<svg  style="width:100%; height:auto;"><circle cx="50%" cy="50%" r="10%" fill="blue" /></svg>';
+						}
+						//рандомайзером выбираем блок 
+					}
+				}
+				document.querySelector(".score").innerHTML=`${score}`;
+			}*/
+/////////////////////////////////////////////////////////////////
+			$(".JQButton").click(function()
+			{
+				var buttonPos=$(".JQButton").position().top;
+				var buttonLen = $(".JQButton").height();
+				var containerLen = $(".container").height();
+				var scrollHeight = buttonLen+containerLen+buttonPos; 
+				
+				var scrollTime=600;
+				$("body,html").animate({"scrollTop":scrollHeight},scrollTime);
+			});
+			
+		</script>
+    </body>
+</html>
